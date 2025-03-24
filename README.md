@@ -6,25 +6,25 @@ This example shows how to deploy a multi-microservice architecture in AWS EKS wi
 ✅ Observability: Distributed tracing, monitoring, and logging with Prometheus & Jaeger.<br />
 ✅ mTLS Encryption: Secure communication between services.<br />
 
-1️⃣ Architecture Overview
-Services:
-frontend-service (User Interface, public)
+1️⃣ Architecture Overview<br />
+Services:<br />
+frontend-service (User Interface, public)<br />
+<br />
+orders-service (Processes orders, internal)<br />
+<br />
+payments-service (Handles payments, internal)<br />
+<br />
+inventory-service (Manages stock, internal)<br />
 
-orders-service (Processes orders, internal)
-
-payments-service (Handles payments, internal)
-
-inventory-service (Manages stock, internal)
-
-Traffic Flow:
-Users access frontend-service via an AWS ALB (Application Load Balancer).
-
-Istio Gateway manages ingress traffic to frontend-service.
-
-frontend-service calls orders-service.
-
-orders-service calls payments-service and inventory-service.
-
-Istio automatically manages retries, observability, and security.
+Traffic Flow:<br />
+Users access frontend-service via an AWS ALB (Application Load Balancer).<br />
+<br />
+Istio Gateway manages ingress traffic to frontend-service.<br />
+<br />
+frontend-service calls orders-service.<br />
+<br />
+orders-service calls payments-service and inventory-service.<br />
+<br />
+Istio automatically manages retries, observability, and security.<br />
 
 

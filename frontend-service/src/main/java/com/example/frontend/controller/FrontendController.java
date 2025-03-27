@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/frontend")
+@RequestMapping("/api")
 public class FrontendController {
     private final FrontendService frontendService;
 

@@ -26,10 +26,11 @@ Run Locally:
 java -jar target/frontend-service-1.0.0-SNAPSHOT.jar
 
 
-Run in Docker on WSL:
+Run in Docker:
 
 docker build -t frontend-service .
 docker run -p 8080:8080 frontend-service
 
 
-
+Test if running locally :
+http://localhost:8080/frontend/orders?userId=1
